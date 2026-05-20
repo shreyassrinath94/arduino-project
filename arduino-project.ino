@@ -15,13 +15,13 @@ void setup() {
   lcd.setCursor(0, 0);
 
   // Print first line
-  lcd.print("Hello World");
+  lcd.print("HellA World");
 
   // Set cursor to second line
   lcd.setCursor(0, 1);
 
   // Print second line
-  lcd.print("Arduino I2C");
+  lcd.print("Arduino IIC");
 }
 
 void loop() {
