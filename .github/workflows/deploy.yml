@@ -18,10 +18,6 @@ jobs:
           Get-ChildItem
           arduino-cli board list
 
-      - name: Kill Arduino IDE
-        run: |
-          taskkill /IM arduino.exe /F || exit 0
-
       - name: Compile
         run: |
           arduino-cli compile --fqbn arduino:avr:uno .
