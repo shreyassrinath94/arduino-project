@@ -20,7 +20,7 @@ jobs:
 
       - name: Kill Arduino IDE
         run: |
-          taskkill /IM arduino.exe /F
+          taskkill /IM arduino.exe /F || exit 0
 
       - name: Compile
         run: |
