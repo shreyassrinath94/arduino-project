@@ -14,23 +14,18 @@ jobs:
 
       - name: Debug
         run: |
-          pwd
-          ls -la
+          Get-Location
+          Get-ChildItem
+          arduino-cli board list
 
-      - name: Kill Serial Processes
+      - name: Kill Arduino IDE
         run: |
-          pkill -f serial || true
-          pkill -f arduino || true
-          sleep 3
+          taskkill /IM arduino.exe /F
 
       - name: Compile
         run: |
-          arduino-cli compile \
-          --fqbn arduino:avr:uno .
+          arduino-cli compile --fqbn arduino:avr:uno .
 
       - name: Upload
         run: |
-          sleep 5
-          arduino-cli upload \
-          -p COM4
-          --fqbn arduino:avr:uno .
+          arduino-cli upload -p COM4 --fqbn arduino:avr:uno .
