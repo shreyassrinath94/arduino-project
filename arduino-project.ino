@@ -21,7 +21,7 @@ void setup() {
   lcd.setCursor(0, 1);
 
   // Print second line
-  lcd.print("Arduino IIC");
+  lcd.print("Arduino I222C");
 }
 
 void loop() {
